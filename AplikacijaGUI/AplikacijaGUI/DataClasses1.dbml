@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="" Member="Glumcis">
+    <Type Name="Glumci">
+      <Column Name="ID" Type="System.String" CanBeNull="false" />
+      <Column Name="ime" Type="System.String" CanBeNull="false" />
+      <Column Name="prezime" Type="System.String" CanBeNull="false" />
+      <Association Name="Serija_Glumci" Member="Serija" ThisKey="ID" OtherKey="Glumci" Type="Serija" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="Osobljes">
+    <Type Name="Osoblje">
+      <Column Name="ID" Type="System.String" CanBeNull="false" />
+      <Column Name="Ime" Type="System.String" CanBeNull="false" />
+      <Column Name="Prezime" Type="System.String" CanBeNull="false" />
+      <Column Name="Tvrtka" Type="System.String" CanBeNull="false" />
+      <Association Name="Serija_Osoblje" Member="Serija" ThisKey="ID" OtherKey="Osoblje" Type="Serija" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="Serijas">
+    <Type Name="Serija">
+      <Column Name="ID" Type="System.String" CanBeNull="false" />
+      <Column Name="Ime" Type="System.String" CanBeNull="false" />
+      <Column Name="Glumci" Type="System.String" CanBeNull="false" />
+      <Column Name="Osoblje" Type="System.String" CanBeNull="false" />
+      <Column Member="Opis" Type="System.String" CanBeNull="false" />
+      <Association Name="Serija_Glumci" Member="Glumcis" ThisKey="Glumci" OtherKey="ID" Type="Glumci" />
+      <Association Name="Serija_Osoblje" Member="Osobljes" ThisKey="Osoblje" OtherKey="ID" Type="Osoblje" />
+      <Association Name="Serija_Klijent_serija" Member="Klijent_serijas" ThisKey="ID,Ime,Glumci,Osoblje,Opis" OtherKey="IDserije,Ime,Glumci,Osoblje,Opis" Type="Klijent_serija" />
+    </Type>
+  </Table>
+  <Table Name="" Member="Klijent_serijas">
+    <Type Name="Klijent_serija">
+      <Column Member="ID" Type="System.String" CanBeNull="false" />
+      <Column Member="IDserije" Type="System.String" CanBeNull="false" />
+      <Column Member="Ime" Type="System.String" CanBeNull="false" />
+      <Column Member="Glumci" Type="System.String" CanBeNull="false" />
+      <Column Member="Osoblje" Type="System.String" CanBeNull="false" />
+      <Column Member="Opis" Type="System.String" CanBeNull="false" />
+      <Column Member="Pogledano_epizoda" Type="System.String" CanBeNull="false" />
+      <Association Name="Serija_Klijent_serija" Member="Serija" ThisKey="IDserije,Ime,Glumci,Osoblje,Opis" OtherKey="ID,Ime,Glumci,Osoblje,Opis" Type="Serija" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
