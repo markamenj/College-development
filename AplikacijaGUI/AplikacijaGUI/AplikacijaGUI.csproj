@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adminglumci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adminglumci.Designer.cs">
+      <DependentUpon>Adminglumci.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Glumciklijent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Glumciklijent.Designer.cs">
+      <DependentUpon>Glumciklijent.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModeratorGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +88,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Adminglumci.resx">
+      <DependentUpon>Adminglumci.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminUI.resx">
       <DependentUpon>AdminUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -78,6 +99,12 @@
     </None>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Glumciklijent.resx">
+      <DependentUpon>Glumciklijent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModeratorGUI.resx">
       <DependentUpon>ModeratorGUI.cs</DependentUpon>

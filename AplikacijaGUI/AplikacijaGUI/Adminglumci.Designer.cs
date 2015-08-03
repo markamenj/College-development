@@ -1,6 +1,6 @@
 ﻿namespace AplikacijaGUI
 {
-    partial class Form1
+    partial class Adminglumci
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.serijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.glumciDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.osobljeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.glumciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serijaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glumciBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -47,18 +45,12 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
             this.imeDataGridViewTextBoxColumn,
-            this.glumciDataGridViewTextBoxColumn,
-            this.osobljeDataGridViewTextBoxColumn,
-            this.opisDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.serijaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 0);
+            this.prezimeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.glumciBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(36, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(586, 230);
+            this.dataGridView1.Size = new System.Drawing.Size(330, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // serijaBindingSource
-            // 
-            this.serijaBindingSource.DataSource = typeof(AplikacijaGUI.Serija);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -68,39 +60,30 @@
             // 
             // imeDataGridViewTextBoxColumn
             // 
-            this.imeDataGridViewTextBoxColumn.DataPropertyName = "Ime";
-            this.imeDataGridViewTextBoxColumn.HeaderText = "Ime";
+            this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
+            this.imeDataGridViewTextBoxColumn.HeaderText = "ime";
             this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
             // 
-            // glumciDataGridViewTextBoxColumn
+            // prezimeDataGridViewTextBoxColumn
             // 
-            this.glumciDataGridViewTextBoxColumn.DataPropertyName = "Glumci";
-            this.glumciDataGridViewTextBoxColumn.HeaderText = "Glumci";
-            this.glumciDataGridViewTextBoxColumn.Name = "glumciDataGridViewTextBoxColumn";
+            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
+            this.prezimeDataGridViewTextBoxColumn.HeaderText = "prezime";
+            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
             // 
-            // osobljeDataGridViewTextBoxColumn
+            // glumciBindingSource
             // 
-            this.osobljeDataGridViewTextBoxColumn.DataPropertyName = "Osoblje";
-            this.osobljeDataGridViewTextBoxColumn.HeaderText = "Osoblje";
-            this.osobljeDataGridViewTextBoxColumn.Name = "osobljeDataGridViewTextBoxColumn";
+            this.glumciBindingSource.DataSource = typeof(AplikacijaGUI.Glumci);
             // 
-            // opisDataGridViewTextBoxColumn
-            // 
-            this.opisDataGridViewTextBoxColumn.DataPropertyName = "Opis";
-            this.opisDataGridViewTextBoxColumn.HeaderText = "Opis";
-            this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
-            // 
-            // Form1
+            // Adminglumci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 232);
+            this.ClientSize = new System.Drawing.Size(378, 262);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "Adminglumci";
+            this.Text = "Adminglumci";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serijaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glumciBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -110,11 +93,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn glumciDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn osobljeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource serijaBindingSource;
-
+        private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource glumciBindingSource;
     }
 }
-

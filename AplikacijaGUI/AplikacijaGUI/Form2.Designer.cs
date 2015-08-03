@@ -1,6 +1,6 @@
 ﻿namespace AplikacijaGUI
 {
-    partial class Form1
+    partial class Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -51,9 +51,9 @@
             this.osobljeDataGridViewTextBoxColumn,
             this.opisDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.serijaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 25);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(586, 230);
+            this.dataGridView1.Size = new System.Drawing.Size(510, 150);
             this.dataGridView1.TabIndex = 0;
             // 
             // serijaBindingSource
@@ -90,15 +90,14 @@
             this.opisDataGridViewTextBoxColumn.HeaderText = "Opis";
             this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
             // 
-            // Form1
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 232);
+            this.ClientSize = new System.Drawing.Size(519, 262);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "Form2";
+            this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serijaBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -114,7 +113,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn osobljeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource serijaBindingSource;
-
     }
 }
-
