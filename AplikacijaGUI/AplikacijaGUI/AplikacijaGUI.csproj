@@ -51,6 +51,12 @@
     <Compile Include="Adminglumci.Designer.cs">
       <DependentUpon>Adminglumci.cs</DependentUpon>
     </Compile>
+    <Compile Include="Adminosoblje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adminosoblje.Designer.cs">
+      <DependentUpon>Adminosoblje.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,16 +86,37 @@
     <Compile Include="Glumciklijent.Designer.cs">
       <DependentUpon>Glumciklijent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Klijentosoblje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klijentosoblje.Designer.cs">
+      <DependentUpon>Klijentosoblje.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModeratorGUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModeratorGUI.designer.cs">
       <DependentUpon>ModeratorGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="MOdglumci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MOdglumci.Designer.cs">
+      <DependentUpon>MOdglumci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modosoblje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modosoblje.Designer.cs">
+      <DependentUpon>Modosoblje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Adminglumci.resx">
       <DependentUpon>Adminglumci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adminosoblje.resx">
+      <DependentUpon>Adminosoblje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUI.resx">
       <DependentUpon>AdminUI.cs</DependentUpon>
@@ -106,8 +133,17 @@
     <EmbeddedResource Include="Glumciklijent.resx">
       <DependentUpon>Glumciklijent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Klijentosoblje.resx">
+      <DependentUpon>Klijentosoblje.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModeratorGUI.resx">
       <DependentUpon>ModeratorGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MOdglumci.resx">
+      <DependentUpon>MOdglumci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modosoblje.resx">
+      <DependentUpon>Modosoblje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
