@@ -17,10 +17,7 @@ namespace AplikacijaGUI
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -42,14 +39,29 @@ namespace AplikacijaGUI
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Adminstart adminstart = new Adminstart();
+            adminstart.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Modstart modstart = new Modstart();
+            modstart.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Klijentstart klistart = new Klijentstart();
+            klistart.Show();
         }
     }
 }

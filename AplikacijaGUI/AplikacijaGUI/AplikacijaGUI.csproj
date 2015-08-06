@@ -63,11 +63,17 @@
     <Compile Include="Adminosoblje.Designer.cs">
       <DependentUpon>Adminosoblje.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminUI.cs">
+    <Compile Include="AdminSerija.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminUI.designer.cs">
-      <DependentUpon>AdminUI.cs</DependentUpon>
+    <Compile Include="AdminSerija.Designer.cs">
+      <DependentUpon>AdminSerija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adminstart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adminstart.Designer.cs">
+      <DependentUpon>Adminstart.cs</DependentUpon>
     </Compile>
     <Compile Include="DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
@@ -104,11 +110,11 @@
     <Compile Include="Klijentserijaklijent.Designer.cs">
       <DependentUpon>Klijentserijaklijent.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModeratorGUI.cs">
+    <Compile Include="Klijentstart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModeratorGUI.designer.cs">
-      <DependentUpon>ModeratorGUI.cs</DependentUpon>
+    <Compile Include="Klijentstart.Designer.cs">
+      <DependentUpon>Klijentstart.cs</DependentUpon>
     </Compile>
     <Compile Include="MOdglumci.cs">
       <SubType>Form</SubType>
@@ -122,6 +128,18 @@
     <Compile Include="Modosoblje.Designer.cs">
       <DependentUpon>Modosoblje.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModSerija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModSerija.Designer.cs">
+      <DependentUpon>ModSerija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modstart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modstart.Designer.cs">
+      <DependentUpon>Modstart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Adminglumci.resx">
@@ -133,8 +151,11 @@
     <EmbeddedResource Include="Adminosoblje.resx">
       <DependentUpon>Adminosoblje.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminUI.resx">
-      <DependentUpon>AdminUI.cs</DependentUpon>
+    <EmbeddedResource Include="AdminSerija.resx">
+      <DependentUpon>AdminSerija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adminstart.resx">
+      <DependentUpon>Adminstart.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
@@ -154,14 +175,20 @@
     <EmbeddedResource Include="Klijentserijaklijent.resx">
       <DependentUpon>Klijentserijaklijent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModeratorGUI.resx">
-      <DependentUpon>ModeratorGUI.cs</DependentUpon>
+    <EmbeddedResource Include="Klijentstart.resx">
+      <DependentUpon>Klijentstart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MOdglumci.resx">
       <DependentUpon>MOdglumci.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modosoblje.resx">
       <DependentUpon>Modosoblje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModSerija.resx">
+      <DependentUpon>ModSerija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modstart.resx">
+      <DependentUpon>Modstart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

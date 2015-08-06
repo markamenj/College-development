@@ -7,3 +7,17 @@ c:\users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\
 c:\users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.csproj.GenerateResource.Cache
 c:\users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.exe
 c:\users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.pdb
+C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Adminglumci.resources
+C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.AdminKlSerija.resources
+C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Adminosoblje.resources
+C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.AdminSerija.resources
+C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Adminstart.resources
+C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Klijentserija.resources
+C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Glumciklijent.resources
+C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Klijentosoblje.resources
+C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Klijentserijaklijent.resources
+C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Klijentstart.resources
+C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.MOdglumci.resources
+C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Modosoblje.resources
+C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.ModSerija.resources
+C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Modstart.resources
