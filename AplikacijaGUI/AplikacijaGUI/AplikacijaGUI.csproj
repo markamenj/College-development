@@ -63,6 +63,12 @@
     <Compile Include="Adminosoblje.Designer.cs">
       <DependentUpon>Adminosoblje.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPass.Designer.cs">
+      <DependentUpon>AdminPass.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminSerija.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,16 +81,49 @@
     <Compile Include="Adminstart.Designer.cs">
       <DependentUpon>Adminstart.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataClasses1.cs">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
     <Compile Include="DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelForm.Designer.cs">
+      <DependentUpon>DelForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertGlumci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertGlumci.Designer.cs">
+      <DependentUpon>InsertGlumci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertGUIKlijentserija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertGUIKlijentserija.Designer.cs">
+      <DependentUpon>InsertGUIKlijentserija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertOsoblje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertOsoblje.Designer.cs">
+      <DependentUpon>InsertOsoblje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertSerija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertSerija.Designer.cs">
+      <DependentUpon>InsertSerija.cs</DependentUpon>
     </Compile>
     <Compile Include="Klijentserija.cs">
       <SubType>Form</SubType>
@@ -122,6 +161,12 @@
     <Compile Include="MOdglumci.Designer.cs">
       <DependentUpon>MOdglumci.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModLogin.Designer.cs">
+      <DependentUpon>ModLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modosoblje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +196,9 @@
     <EmbeddedResource Include="Adminosoblje.resx">
       <DependentUpon>Adminosoblje.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminPass.resx">
+      <DependentUpon>AdminPass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminSerija.resx">
       <DependentUpon>AdminSerija.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,8 +208,23 @@
     <None Include="DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="DelForm.resx">
+      <DependentUpon>DelForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertGlumci.resx">
+      <DependentUpon>InsertGlumci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertGUIKlijentserija.resx">
+      <DependentUpon>InsertGUIKlijentserija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertOsoblje.resx">
+      <DependentUpon>InsertOsoblje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertSerija.resx">
+      <DependentUpon>InsertSerija.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Klijentserija.resx">
       <DependentUpon>Klijentserija.cs</DependentUpon>
@@ -180,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MOdglumci.resx">
       <DependentUpon>MOdglumci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModLogin.resx">
+      <DependentUpon>ModLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modosoblje.resx">
       <DependentUpon>Modosoblje.cs</DependentUpon>

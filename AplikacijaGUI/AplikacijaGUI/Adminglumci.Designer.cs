@@ -34,6 +34,9 @@
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.glumciBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.Delete = new System.Windows.Forms.Button();
+            this.Insert = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.glumciBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -47,9 +50,9 @@
             this.imeDataGridViewTextBoxColumn,
             this.prezimeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.glumciBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(330, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(354, 150);
             this.dataGridView1.TabIndex = 0;
             // 
             // iDDataGridViewTextBoxColumn
@@ -57,6 +60,7 @@
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // imeDataGridViewTextBoxColumn
             // 
@@ -74,11 +78,44 @@
             // 
             this.glumciBindingSource.DataSource = typeof(AplikacijaGUI.Glumci);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(291, 227);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Delete
+            // 
+            this.Delete.Location = new System.Drawing.Point(210, 226);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(75, 23);
+            this.Delete.TabIndex = 2;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Insert
+            // 
+            this.Insert.Location = new System.Drawing.Point(129, 226);
+            this.Insert.Name = "Insert";
+            this.Insert.Size = new System.Drawing.Size(75, 23);
+            this.Insert.TabIndex = 3;
+            this.Insert.Text = "Insert";
+            this.Insert.UseVisualStyleBackColor = true;
+            this.Insert.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Adminglumci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 262);
+            this.ClientSize = new System.Drawing.Size(391, 262);
+            this.Controls.Add(this.Insert);
+            this.Controls.Add(this.Delete);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Adminglumci";
             this.Text = "Adminglumci";
@@ -95,5 +132,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource glumciBindingSource;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button Insert;
     }
 }

@@ -16,5 +16,17 @@ namespace AplikacijaGUI
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+                        Klijentserijaklijent klisserkli = new Klijentserijaklijent();
+                        klisserkli.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Klijentserija klisse = new Klijentserija();
+            klisse.Show();
+        }
     }
 }

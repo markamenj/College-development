@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.klijentserijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDserijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,6 +37,10 @@
             this.osobljeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pogledanoepizodaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.klijentserijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            this.Delete = new System.Windows.Forms.Button();
+            this.Insert = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klijentserijaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -57,18 +60,15 @@
             this.dataGridView1.DataSource = this.klijentserijaBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(462, 250);
+            this.dataGridView1.Size = new System.Drawing.Size(462, 169);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // klijentserijaBindingSource
-            // 
-            this.klijentserijaBindingSource.DataSource = typeof(AplikacijaGUI.Klijent_serija);
             // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // iDserijeDataGridViewTextBoxColumn
             // 
@@ -106,11 +106,48 @@
             this.pogledanoepizodaDataGridViewTextBoxColumn.HeaderText = "Pogledano_epizoda";
             this.pogledanoepizodaDataGridViewTextBoxColumn.Name = "pogledanoepizodaDataGridViewTextBoxColumn";
             // 
+            // klijentserijaBindingSource
+            // 
+            this.klijentserijaBindingSource.DataSource = typeof(AplikacijaGUI.Klijent_serija);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(399, 227);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Delete
+            // 
+            this.Delete.Location = new System.Drawing.Point(318, 227);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(75, 23);
+            this.Delete.TabIndex = 3;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Insert
+            // 
+            this.Insert.Location = new System.Drawing.Point(237, 227);
+            this.Insert.Name = "Insert";
+            this.Insert.Size = new System.Drawing.Size(75, 23);
+            this.Insert.TabIndex = 4;
+            this.Insert.Text = "Insert";
+            this.Insert.UseVisualStyleBackColor = true;
+            this.Insert.Click += new System.EventHandler(this.button3_Click);
+            // 
             // AdminKlSerija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(486, 262);
+            this.Controls.Add(this.Insert);
+            this.Controls.Add(this.Delete);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "AdminKlSerija";
             this.Text = "AdminKlSerija";
@@ -131,5 +168,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pogledanoepizodaDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource klijentserijaBindingSource;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button Insert;
     }
 }

@@ -35,6 +35,7 @@
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tvrtkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.osobljeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.osobljeBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +60,7 @@
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // imeDataGridViewTextBoxColumn
             // 
@@ -82,11 +84,21 @@
             // 
             this.osobljeBindingSource.DataSource = typeof(AplikacijaGUI.Osoblje);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(380, 227);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Klijentosoblje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 262);
+            this.ClientSize = new System.Drawing.Size(465, 262);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Klijentosoblje";
             this.Text = "Klijentosoblje";
@@ -104,5 +116,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tvrtkaDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource osobljeBindingSource;
+        private System.Windows.Forms.Button button1;
     }
 }

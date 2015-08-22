@@ -36,6 +36,9 @@
             this.osobljeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.Delete = new System.Windows.Forms.Button();
+            this.Insert = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serijaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +56,7 @@
             this.dataGridView1.DataSource = this.serijaBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(13, 13);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(544, 237);
+            this.dataGridView1.Size = new System.Drawing.Size(545, 107);
             this.dataGridView1.TabIndex = 0;
             // 
             // iDDataGridViewTextBoxColumn
@@ -61,6 +64,7 @@
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // imeDataGridViewTextBoxColumn
             // 
@@ -90,11 +94,44 @@
             // 
             this.serijaBindingSource.DataSource = typeof(AplikacijaGUI.Serija);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(518, 227);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Delete
+            // 
+            this.Delete.Location = new System.Drawing.Point(437, 227);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(75, 23);
+            this.Delete.TabIndex = 2;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Insert
+            // 
+            this.Insert.Location = new System.Drawing.Point(356, 227);
+            this.Insert.Name = "Insert";
+            this.Insert.Size = new System.Drawing.Size(75, 23);
+            this.Insert.TabIndex = 3;
+            this.Insert.Text = "Insert";
+            this.Insert.UseVisualStyleBackColor = true;
+            this.Insert.Click += new System.EventHandler(this.button3_Click);
+            // 
             // AdminSerija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 262);
+            this.Controls.Add(this.Insert);
+            this.Controls.Add(this.Delete);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "AdminSerija";
             this.Text = "AdminSerija";
@@ -113,5 +150,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn osobljeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource serijaBindingSource;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button Insert;
     }
 }

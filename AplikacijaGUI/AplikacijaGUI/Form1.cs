@@ -48,14 +48,14 @@ namespace AplikacijaGUI
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Adminstart adminstart = new Adminstart();
-            adminstart.Show();
+            AdminPass apass = new AdminPass();
+            apass.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Modstart modstart = new Modstart();
-            modstart.Show();
+            ModLogin mlog = new ModLogin();
+            mlog.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -16,5 +16,23 @@ namespace AplikacijaGUI
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ModSerija modse = new ModSerija();
+            modse.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Modosoblje modos = new Modosoblje();
+            modos.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MOdglumci modgl = new MOdglumci();
+            modgl.Show();
+        }
     }
 }

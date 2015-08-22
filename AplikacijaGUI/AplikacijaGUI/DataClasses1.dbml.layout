@@ -20,14 +20,14 @@
         <elementListCompartment Id="bbb7362b-7857-42a3-9a91-d999b6c2a037" absoluteBounds="8.89, 4.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(6.75 : 2.31814697265625); (8.75 : 2.31814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(6.75 : 2.31814697265625); (8.75 : 2.31814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/Serija/Serija_Glumci" />
       <nodes>
         <classShapeMoniker Id="10ce28c5-9764-455b-b5b6-a973064242c0" />
         <classShapeMoniker Id="d632170c-83e6-45e5-9f1e-b94a996a4a0d" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(6.46875 : 3.02089680989583); (6.46875 : 5.77329752604167); (8.875 : 5.77329752604167)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(6.46875 : 3.02089680989583); (6.46875 : 5.77329752604167); (8.875 : 5.77329752604167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/Serija/Serija_Osoblje" />
       <nodes>
         <classShapeMoniker Id="10ce28c5-9764-455b-b5b6-a973064242c0" />
@@ -40,7 +40,7 @@
         <elementListCompartment Id="6a299ac3-22f8-4f5b-9af5-a63b10e6a9a1" absoluteBounds="4.14, 3.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5.4375 : 3.02089680989583); (5.4375 : 3.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.4375 : 3.02089680989583); (5.4375 : 3.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/Serija/Serija_Klijent_serija" />
       <nodes>
         <classShapeMoniker Id="10ce28c5-9764-455b-b5b6-a973064242c0" />

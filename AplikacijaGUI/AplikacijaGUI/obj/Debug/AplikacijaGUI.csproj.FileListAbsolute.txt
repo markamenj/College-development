@@ -21,3 +21,4 @@ C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\
 C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Modosoblje.resources
 C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.ModSerija.resources
 C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Modstart.resources
+C:\Users\zmaj\Documents\Visual Studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.DelForm.resources

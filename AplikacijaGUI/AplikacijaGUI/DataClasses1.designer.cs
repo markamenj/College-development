@@ -29,7 +29,25 @@ namespace AplikacijaGUI
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertGlumci(Glumci instance);
+    partial void UpdateGlumci(Glumci instance);
+    partial void DeleteGlumci(Glumci instance);
+    partial void InsertOsoblje(Osoblje instance);
+    partial void UpdateOsoblje(Osoblje instance);
+    partial void DeleteOsoblje(Osoblje instance);
+    partial void InsertSerija(Serija instance);
+    partial void UpdateSerija(Serija instance);
+    partial void DeleteSerija(Serija instance);
+    partial void InsertKlijent_serija(Klijent_serija instance);
+    partial void UpdateKlijent_serija(Klijent_serija instance);
+    partial void DeleteKlijent_serija(Klijent_serija instance);
     #endregion
+		
+		public DataClasses1DataContext() : 
+				base(global::AplikacijaGUI.Properties.Settings.Default.DataSourceConnectionString, mappingSource)
+		{
+			OnCreated();
+		}
 		
 		public DataClasses1DataContext(string connection) : 
 				base(connection, mappingSource)
@@ -89,32 +107,41 @@ namespace AplikacijaGUI
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="")]
-	public partial class Glumci
+	public partial class Glumci : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
-		private string _ID;
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _ID = default(string);
 		
 		private string _ime;
 		
 		private string _prezime;
 		
+		private EntityRef<Serija> _Serija;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnimeChanging(string value);
+    partial void OnimeChanged();
+    partial void OnprezimeChanging(string value);
+    partial void OnprezimeChanged();
+    #endregion
+		
 		public Glumci()
 		{
+			this._Serija = default(EntityRef<Serija>);
+			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, CanBeNull=false, IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
 		public string ID
 		{
 			get
 			{
 				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this._ID = value;
-				}
 			}
 		}
 		
@@ -129,7 +156,11 @@ namespace AplikacijaGUI
 			{
 				if ((this._ime != value))
 				{
+					this.OnimeChanging(value);
+					this.SendPropertyChanging();
 					this._ime = value;
+					this.SendPropertyChanged("ime");
+					this.OnimeChanged();
 				}
 			}
 		}
@@ -145,17 +176,77 @@ namespace AplikacijaGUI
 			{
 				if ((this._prezime != value))
 				{
+					this.OnprezimeChanging(value);
+					this.SendPropertyChanging();
 					this._prezime = value;
+					this.SendPropertyChanged("prezime");
+					this.OnprezimeChanged();
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Serija_Glumci", Storage="_Serija", ThisKey="ID", OtherKey="Glumci", IsForeignKey=true)]
+		public Serija Serija
+		{
+			get
+			{
+				return this._Serija.Entity;
+			}
+			set
+			{
+				Serija previousValue = this._Serija.Entity;
+				if (((previousValue != value) 
+							|| (this._Serija.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Serija.Entity = null;
+						previousValue.Glumcis.Remove(this);
+					}
+					this._Serija.Entity = value;
+					if ((value != null))
+					{
+						value.Glumcis.Add(this);
+						this._ID = value.Glumci;
+					}
+					else
+					{
+						this._ID = default(string);
+					}
+					this.SendPropertyChanged("Serija");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="")]
-	public partial class Osoblje
+	public partial class Osoblje : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
-		private string _ID;
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _ID = default(string);
 		
 		private string _Ime;
 		
@@ -163,23 +254,32 @@ namespace AplikacijaGUI
 		
 		private string _Tvrtka;
 		
+		private EntityRef<Serija> _Serija;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnImeChanging(string value);
+    partial void OnImeChanged();
+    partial void OnPrezimeChanging(string value);
+    partial void OnPrezimeChanged();
+    partial void OnTvrtkaChanging(string value);
+    partial void OnTvrtkaChanged();
+    #endregion
+		
 		public Osoblje()
 		{
+			this._Serija = default(EntityRef<Serija>);
+			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, CanBeNull=false, IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
 		public string ID
 		{
 			get
 			{
 				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this._ID = value;
-				}
 			}
 		}
 		
@@ -194,7 +294,11 @@ namespace AplikacijaGUI
 			{
 				if ((this._Ime != value))
 				{
+					this.OnImeChanging(value);
+					this.SendPropertyChanging();
 					this._Ime = value;
+					this.SendPropertyChanged("Ime");
+					this.OnImeChanged();
 				}
 			}
 		}
@@ -210,7 +314,11 @@ namespace AplikacijaGUI
 			{
 				if ((this._Prezime != value))
 				{
+					this.OnPrezimeChanging(value);
+					this.SendPropertyChanging();
 					this._Prezime = value;
+					this.SendPropertyChanged("Prezime");
+					this.OnPrezimeChanged();
 				}
 			}
 		}
@@ -226,17 +334,77 @@ namespace AplikacijaGUI
 			{
 				if ((this._Tvrtka != value))
 				{
+					this.OnTvrtkaChanging(value);
+					this.SendPropertyChanging();
 					this._Tvrtka = value;
+					this.SendPropertyChanged("Tvrtka");
+					this.OnTvrtkaChanged();
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Serija_Osoblje", Storage="_Serija", ThisKey="ID", OtherKey="Osoblje", IsForeignKey=true)]
+		public Serija Serija
+		{
+			get
+			{
+				return this._Serija.Entity;
+			}
+			set
+			{
+				Serija previousValue = this._Serija.Entity;
+				if (((previousValue != value) 
+							|| (this._Serija.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Serija.Entity = null;
+						previousValue.Osobljes.Remove(this);
+					}
+					this._Serija.Entity = value;
+					if ((value != null))
+					{
+						value.Osobljes.Add(this);
+						this._ID = value.Osoblje;
+					}
+					else
+					{
+						this._ID = default(string);
+					}
+					this.SendPropertyChanged("Serija");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="")]
-	public partial class Serija
+	public partial class Serija : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
-		private string _ID;
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _ID = default(string);
 		
 		private string _Ime;
 		
@@ -246,23 +414,40 @@ namespace AplikacijaGUI
 		
 		private string _Opis;
 		
+		private EntitySet<Glumci> _Glumcis;
+		
+		private EntitySet<Osoblje> _Osobljes;
+		
+		private EntitySet<Klijent_serija> _Klijent_serijas;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnImeChanging(string value);
+    partial void OnImeChanged();
+    partial void OnGlumciChanging(string value);
+    partial void OnGlumciChanged();
+    partial void OnOsobljeChanging(string value);
+    partial void OnOsobljeChanged();
+    partial void OnOpisChanging(string value);
+    partial void OnOpisChanged();
+    #endregion
+		
 		public Serija()
 		{
+			this._Glumcis = new EntitySet<Glumci>(new Action<Glumci>(this.attach_Glumcis), new Action<Glumci>(this.detach_Glumcis));
+			this._Osobljes = new EntitySet<Osoblje>(new Action<Osoblje>(this.attach_Osobljes), new Action<Osoblje>(this.detach_Osobljes));
+			this._Klijent_serijas = new EntitySet<Klijent_serija>(new Action<Klijent_serija>(this.attach_Klijent_serijas), new Action<Klijent_serija>(this.detach_Klijent_serijas));
+			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, CanBeNull=false, IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
 		public string ID
 		{
 			get
 			{
 				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this._ID = value;
-				}
 			}
 		}
 		
@@ -277,7 +462,11 @@ namespace AplikacijaGUI
 			{
 				if ((this._Ime != value))
 				{
+					this.OnImeChanging(value);
+					this.SendPropertyChanging();
 					this._Ime = value;
+					this.SendPropertyChanged("Ime");
+					this.OnImeChanged();
 				}
 			}
 		}
@@ -293,7 +482,11 @@ namespace AplikacijaGUI
 			{
 				if ((this._Glumci != value))
 				{
+					this.OnGlumciChanging(value);
+					this.SendPropertyChanging();
 					this._Glumci = value;
+					this.SendPropertyChanged("Glumci");
+					this.OnGlumciChanged();
 				}
 			}
 		}
@@ -309,7 +502,11 @@ namespace AplikacijaGUI
 			{
 				if ((this._Osoblje != value))
 				{
+					this.OnOsobljeChanging(value);
+					this.SendPropertyChanging();
 					this._Osoblje = value;
+					this.SendPropertyChanged("Osoblje");
+					this.OnOsobljeChanged();
 				}
 			}
 		}
@@ -325,17 +522,118 @@ namespace AplikacijaGUI
 			{
 				if ((this._Opis != value))
 				{
+					this.OnOpisChanging(value);
+					this.SendPropertyChanging();
 					this._Opis = value;
+					this.SendPropertyChanged("Opis");
+					this.OnOpisChanged();
 				}
 			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Serija_Glumci", Storage="_Glumcis", ThisKey="Glumci", OtherKey="ID")]
+		public EntitySet<Glumci> Glumcis
+		{
+			get
+			{
+				return this._Glumcis;
+			}
+			set
+			{
+				this._Glumcis.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Serija_Osoblje", Storage="_Osobljes", ThisKey="Osoblje", OtherKey="ID")]
+		public EntitySet<Osoblje> Osobljes
+		{
+			get
+			{
+				return this._Osobljes;
+			}
+			set
+			{
+				this._Osobljes.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Serija_Klijent_serija", Storage="_Klijent_serijas", ThisKey="ID,Ime,Glumci,Osoblje,Opis", OtherKey="IDserije,Ime,Glumci,Osoblje,Opis")]
+		public EntitySet<Klijent_serija> Klijent_serijas
+		{
+			get
+			{
+				return this._Klijent_serijas;
+			}
+			set
+			{
+				this._Klijent_serijas.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Glumcis(Glumci entity)
+		{
+			this.SendPropertyChanging();
+			entity.Serija = this;
+		}
+		
+		private void detach_Glumcis(Glumci entity)
+		{
+			this.SendPropertyChanging();
+			entity.Serija = null;
+		}
+		
+		private void attach_Osobljes(Osoblje entity)
+		{
+			this.SendPropertyChanging();
+			entity.Serija = this;
+		}
+		
+		private void detach_Osobljes(Osoblje entity)
+		{
+			this.SendPropertyChanging();
+			entity.Serija = null;
+		}
+		
+		private void attach_Klijent_serijas(Klijent_serija entity)
+		{
+			this.SendPropertyChanging();
+			entity.Serija = this;
+		}
+		
+		private void detach_Klijent_serijas(Klijent_serija entity)
+		{
+			this.SendPropertyChanging();
+			entity.Serija = null;
 		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="")]
-	public partial class Klijent_serija
+	public partial class Klijent_serija : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
-		private string _ID;
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _ID = default(string);
 		
 		private string _IDserije;
 		
@@ -349,23 +647,38 @@ namespace AplikacijaGUI
 		
 		private string _Pogledano_epizoda;
 		
+		private EntityRef<Serija> _Serija;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDserijeChanging(string value);
+    partial void OnIDserijeChanged();
+    partial void OnImeChanging(string value);
+    partial void OnImeChanged();
+    partial void OnGlumciChanging(string value);
+    partial void OnGlumciChanged();
+    partial void OnOsobljeChanging(string value);
+    partial void OnOsobljeChanged();
+    partial void OnOpisChanging(string value);
+    partial void OnOpisChanged();
+    partial void OnPogledano_epizodaChanging(string value);
+    partial void OnPogledano_epizodaChanged();
+    #endregion
+		
 		public Klijent_serija()
 		{
+			this._Serija = default(EntityRef<Serija>);
+			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, CanBeNull=false, IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
 		public string ID
 		{
 			get
 			{
 				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this._ID = value;
-				}
 			}
 		}
 		
@@ -380,7 +693,15 @@ namespace AplikacijaGUI
 			{
 				if ((this._IDserije != value))
 				{
+					if (this._Serija.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnIDserijeChanging(value);
+					this.SendPropertyChanging();
 					this._IDserije = value;
+					this.SendPropertyChanged("IDserije");
+					this.OnIDserijeChanged();
 				}
 			}
 		}
@@ -396,7 +717,15 @@ namespace AplikacijaGUI
 			{
 				if ((this._Ime != value))
 				{
+					if (this._Serija.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnImeChanging(value);
+					this.SendPropertyChanging();
 					this._Ime = value;
+					this.SendPropertyChanged("Ime");
+					this.OnImeChanged();
 				}
 			}
 		}
@@ -412,7 +741,15 @@ namespace AplikacijaGUI
 			{
 				if ((this._Glumci != value))
 				{
+					if (this._Serija.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnGlumciChanging(value);
+					this.SendPropertyChanging();
 					this._Glumci = value;
+					this.SendPropertyChanged("Glumci");
+					this.OnGlumciChanged();
 				}
 			}
 		}
@@ -428,7 +765,15 @@ namespace AplikacijaGUI
 			{
 				if ((this._Osoblje != value))
 				{
+					if (this._Serija.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnOsobljeChanging(value);
+					this.SendPropertyChanging();
 					this._Osoblje = value;
+					this.SendPropertyChanged("Osoblje");
+					this.OnOsobljeChanged();
 				}
 			}
 		}
@@ -444,7 +789,15 @@ namespace AplikacijaGUI
 			{
 				if ((this._Opis != value))
 				{
+					if (this._Serija.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnOpisChanging(value);
+					this.SendPropertyChanging();
 					this._Opis = value;
+					this.SendPropertyChanged("Opis");
+					this.OnOpisChanged();
 				}
 			}
 		}
@@ -460,8 +813,74 @@ namespace AplikacijaGUI
 			{
 				if ((this._Pogledano_epizoda != value))
 				{
+					this.OnPogledano_epizodaChanging(value);
+					this.SendPropertyChanging();
 					this._Pogledano_epizoda = value;
+					this.SendPropertyChanged("Pogledano_epizoda");
+					this.OnPogledano_epizodaChanged();
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Serija_Klijent_serija", Storage="_Serija", ThisKey="IDserije,Ime,Glumci,Osoblje,Opis", OtherKey="ID,Ime,Glumci,Osoblje,Opis", IsForeignKey=true)]
+		public Serija Serija
+		{
+			get
+			{
+				return this._Serija.Entity;
+			}
+			set
+			{
+				Serija previousValue = this._Serija.Entity;
+				if (((previousValue != value) 
+							|| (this._Serija.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Serija.Entity = null;
+						previousValue.Klijent_serijas.Remove(this);
+					}
+					this._Serija.Entity = value;
+					if ((value != null))
+					{
+						value.Klijent_serijas.Add(this);
+						this._IDserije = value.ID;
+						this._Ime = value.Ime;
+						this._Glumci = value.Glumci;
+						this._Osoblje = value.Osoblje;
+						this._Opis = value.Opis;
+					}
+					else
+					{
+						this._IDserije = default(string);
+						this._Ime = default(string);
+						this._Glumci = default(string);
+						this._Osoblje = default(string);
+						this._Opis = default(string);
+					}
+					this.SendPropertyChanged("Serija");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
