@@ -16,5 +16,11 @@ namespace AplikacijaGUI
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            InsertGlumci iglumci = new InsertGlumci();
+            iglumci.Show();
+        }
     }
 }

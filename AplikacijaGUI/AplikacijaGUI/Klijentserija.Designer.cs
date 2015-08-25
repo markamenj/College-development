@@ -36,7 +36,7 @@
             this.osobljeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.Insert = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serijaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -92,22 +92,22 @@
             // 
             this.serijaBindingSource.DataSource = typeof(AplikacijaGUI.Serija);
             // 
-            // button1
+            // Insert
             // 
-            this.button1.Location = new System.Drawing.Point(507, 227);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Insert.Location = new System.Drawing.Point(507, 227);
+            this.Insert.Name = "Insert";
+            this.Insert.Size = new System.Drawing.Size(75, 23);
+            this.Insert.TabIndex = 1;
+            this.Insert.Text = "Insert";
+            this.Insert.UseVisualStyleBackColor = true;
+            this.Insert.Click += new System.EventHandler(this.button1_Click);
             // 
             // Klijentserija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 262);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Insert);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Klijentserija";
             this.Text = "Form2";
@@ -126,6 +126,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn osobljeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource serijaBindingSource;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Insert;
     }
 }
