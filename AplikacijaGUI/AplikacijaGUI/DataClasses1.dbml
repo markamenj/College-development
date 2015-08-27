@@ -1,44 +1,46 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Integrated Security=True" SettingsObjectName="AplikacijaGUI.Properties.Settings" SettingsPropertyName="DataSourceConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="" Member="Glumcis">
-    <Type Name="Glumci">
-      <Column Name="ID" Type="System.String" IsReadOnly="true" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="ime" Type="System.String" CanBeNull="false" />
-      <Column Name="prezime" Type="System.String" CanBeNull="false" />
-      <Association Name="Serija_Glumci" Member="Serija" ThisKey="ID" OtherKey="Glumci" Type="Serija" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="" Member="Osobljes">
-    <Type Name="Osoblje">
-      <Column Name="ID" Type="System.String" IsReadOnly="true" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Ime" Type="System.String" CanBeNull="false" />
-      <Column Name="Prezime" Type="System.String" CanBeNull="false" />
-      <Column Name="Tvrtka" Type="System.String" CanBeNull="false" />
-      <Association Name="Serija_Osoblje" Member="Serija" ThisKey="ID" OtherKey="Osoblje" Type="Serija" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="" Member="Serijas">
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AplikacijaBase" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AplikacijaBase.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="AplikacijaGUI.Properties.Settings" SettingsPropertyName="AplikacijaBaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Serija" Member="Serijas">
     <Type Name="Serija">
-      <Column Name="ID" Type="System.String" IsReadOnly="true" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Ime" Type="System.String" CanBeNull="false" />
-      <Column Name="Glumci" Type="System.String" CanBeNull="false" />
-      <Column Name="Osoblje" Type="System.String" CanBeNull="false" />
-      <Column Name="Opis" Type="System.String" CanBeNull="false" />
-      <Association Name="Serija_Glumci" Member="Glumcis" ThisKey="Glumci" OtherKey="ID" Type="Glumci" />
-      <Association Name="Serija_Osoblje" Member="Osobljes" ThisKey="Osoblje" OtherKey="ID" Type="Osoblje" />
-      <Association Name="Serija_Klijent_serija" Member="Klijent_serijas" ThisKey="ID,Ime,Glumci,Osoblje,Opis" OtherKey="IDserije,Ime,Glumci,Osoblje,Opis" Type="Klijent_serija" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ime" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Glumci" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Osoblje" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Opis" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Serija_Klijent_serija" Member="Klijent_serija" ThisKey="ID" OtherKey="ID" Type="Klijent_serija" Cardinality="One" />
+      <Association Name="Serija_Klijent_serija1" Member="Klijent_serijas" ThisKey="ID" OtherKey="IDserije" Type="Klijent_serija" />
+      <Association Name="Glumci_Serija" Member="Glumci1" ThisKey="ID" OtherKey="ID" Type="Glumci" IsForeignKey="true" />
+      <Association Name="Osoblje_Serija" Member="Osoblje1" ThisKey="ID" OtherKey="ID" Type="Osoblje" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="" Member="Klijent_serijas">
+  <Table Name="dbo.Glumci" Member="Glumcis">
+    <Type Name="Glumci">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ime" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="prezime" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Glumci_Serija" Member="Serija" ThisKey="ID" OtherKey="ID" Type="Serija" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Klijent_serija" Member="Klijent_serijas">
     <Type Name="Klijent_serija">
-      <Column Name="ID" Type="System.String" IsReadOnly="true" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="IDserije" Type="System.String" CanBeNull="false" />
-      <Column Name="Ime" Type="System.String" CanBeNull="false" />
-      <Column Name="Glumci" Type="System.String" CanBeNull="false" />
-      <Column Name="Osoblje" Type="System.String" CanBeNull="false" />
-      <Column Name="Opis" Type="System.String" CanBeNull="false" />
-      <Column Name="Pogledano_epizoda" Type="System.String" CanBeNull="false" />
-      <Association Name="Serija_Klijent_serija" Member="Serija" ThisKey="IDserije,Ime,Glumci,Osoblje,Opis" OtherKey="ID,Ime,Glumci,Osoblje,Opis" Type="Serija" IsForeignKey="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDserije" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ime" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Glumci" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Osoblje" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Opis" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Pogledano_epizoda" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Serija_Klijent_serija" Member="Serija" ThisKey="ID" OtherKey="ID" Type="Serija" IsForeignKey="true" />
+      <Association Name="Serija_Klijent_serija1" Member="Serija1" ThisKey="IDserije" OtherKey="ID" Type="Serija" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Osoblje" Member="Osobljes">
+    <Type Name="Osoblje">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ime" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Prezime" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Tvrtka" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Osoblje_Serija" Member="Serija" ThisKey="ID" OtherKey="ID" Type="Serija" Cardinality="One" />
     </Type>
   </Table>
 </Database>

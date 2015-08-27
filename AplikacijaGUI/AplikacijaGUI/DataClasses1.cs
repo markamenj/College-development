@@ -1,5 +1,9 @@
 namespace AplikacijaGUI
 {
+    partial class Serija
+    {
+    }
+
     partial class Glumci
     {
     }
