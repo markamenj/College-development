@@ -8,33 +8,20 @@
         <elementListCompartment Id="85af18c7-6cc5-4f9a-a8da-c4dfe03062b2" absoluteBounds="7.015, 2.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="842bbf0c-9852-47b8-a71a-f6d1f154ea78" absoluteBounds="6, 4.625, 2, 1.3862939453125">
-      <DataClassMoniker Name="/DataClasses1DataContext/Glumci" />
-      <nestedChildShapes>
-        <elementListCompartment Id="58c19ecb-dbf2-4d7c-a451-425365ccb546" absoluteBounds="6.015, 5.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <associationConnector edgePoints="[(7.5 : 4.625); (7.5 : 3.39589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/DataClasses1DataContext/Glumci/Glumci_Serija" />
-      <nodes>
-        <classShapeMoniker Id="842bbf0c-9852-47b8-a71a-f6d1f154ea78" />
-        <classShapeMoniker Id="334d0757-8de8-4d7e-a4ae-6cb3caf5b907" />
-      </nodes>
-    </associationConnector>
     <classShape Id="154730d8-673a-4847-9e03-88f38b257f30" absoluteBounds="3, 2.625, 2, 2.1554996744791666">
       <DataClassMoniker Name="/DataClasses1DataContext/Klijent_serija" />
       <nestedChildShapes>
         <elementListCompartment Id="27f832f8-976c-4e6d-b078-a446aa3acdb4" absoluteBounds="3.0149999999999997, 3.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(7 : 3.01044840494792); (5 : 3.01044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(7 : 3.01044840494792); (5 : 3.01044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/Serija/Serija_Klijent_serija" />
       <nodes>
         <classShapeMoniker Id="334d0757-8de8-4d7e-a4ae-6cb3caf5b907" />
         <classShapeMoniker Id="154730d8-673a-4847-9e03-88f38b257f30" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(7 : 2.75522420247396); (5 : 2.75522420247396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(7 : 2.75522420247396); (5 : 2.75522420247396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/Serija/Serija_Klijent_serija1" />
       <nodes>
         <classShapeMoniker Id="334d0757-8de8-4d7e-a4ae-6cb3caf5b907" />
@@ -47,10 +34,23 @@
         <elementListCompartment Id="b8a847ef-d5b9-4cee-9c62-6e163a2c9802" absoluteBounds="9.015, 4.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(10.03125 : 4.125); (10.03125 : 2.51044840494792); (9 : 2.51044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(10.03125 : 4.125); (10.03125 : 2.51044840494792); (9 : 2.51044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/Osoblje/Osoblje_Serija" />
       <nodes>
         <classShapeMoniker Id="c534ca7a-7e97-4087-84b2-5d0e1257ded4" />
+        <classShapeMoniker Id="334d0757-8de8-4d7e-a4ae-6cb3caf5b907" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f2fb2a12-632d-44e7-b76e-ef4608b33313" absoluteBounds="6.125, 4.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClasses1DataContext/Glumci" />
+      <nestedChildShapes>
+        <elementListCompartment Id="86b136f9-052f-4675-ad30-96b010489d63" absoluteBounds="6.14, 4.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.5625 : 4.375); (7.5625 : 3.39589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Glumci/Glumci_Serija" />
+      <nodes>
+        <classShapeMoniker Id="f2fb2a12-632d-44e7-b76e-ef4608b33313" />
         <classShapeMoniker Id="334d0757-8de8-4d7e-a4ae-6cb3caf5b907" />
       </nodes>
     </associationConnector>

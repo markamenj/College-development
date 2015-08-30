@@ -33,15 +33,15 @@ namespace AplikacijaGUI
     partial void InsertSerija(Serija instance);
     partial void UpdateSerija(Serija instance);
     partial void DeleteSerija(Serija instance);
-    partial void InsertGlumci(Glumci instance);
-    partial void UpdateGlumci(Glumci instance);
-    partial void DeleteGlumci(Glumci instance);
     partial void InsertKlijent_serija(Klijent_serija instance);
     partial void UpdateKlijent_serija(Klijent_serija instance);
     partial void DeleteKlijent_serija(Klijent_serija instance);
     partial void InsertOsoblje(Osoblje instance);
     partial void UpdateOsoblje(Osoblje instance);
     partial void DeleteOsoblje(Osoblje instance);
+    partial void InsertGlumci(Glumci instance);
+    partial void UpdateGlumci(Glumci instance);
+    partial void DeleteGlumci(Glumci instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -82,14 +82,6 @@ namespace AplikacijaGUI
 			}
 		}
 		
-		public System.Data.Linq.Table<Glumci> Glumcis
-		{
-			get
-			{
-				return this.GetTable<Glumci>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Klijent_serija> Klijent_serijas
 		{
 			get
@@ -103,6 +95,14 @@ namespace AplikacijaGUI
 			get
 			{
 				return this.GetTable<Osoblje>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Glumci> Glumcis
+		{
+			get
+			{
+				return this.GetTable<Glumci>();
 			}
 		}
 	}
@@ -127,9 +127,9 @@ namespace AplikacijaGUI
 		
 		private EntitySet<Klijent_serija> _Klijent_serijas;
 		
-		private EntityRef<Glumci> _Glumci1;
-		
 		private EntityRef<Osoblje> _Osoblje1;
+		
+		private EntityRef<Glumci> _Glumci1;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -151,8 +151,8 @@ namespace AplikacijaGUI
 		{
 			this._Klijent_serija = default(EntityRef<Klijent_serija>);
 			this._Klijent_serijas = new EntitySet<Klijent_serija>(new Action<Klijent_serija>(this.attach_Klijent_serijas), new Action<Klijent_serija>(this.detach_Klijent_serijas));
-			this._Glumci1 = default(EntityRef<Glumci>);
 			this._Osoblje1 = default(EntityRef<Osoblje>);
+			this._Glumci1 = default(EntityRef<Glumci>);
 			OnCreated();
 		}
 		
@@ -167,7 +167,7 @@ namespace AplikacijaGUI
 			{
 				if ((this._ID != value))
 				{
-					if ((this._Glumci1.HasLoadedOrAssignedValue || this._Osoblje1.HasLoadedOrAssignedValue))
+					if ((this._Osoblje1.HasLoadedOrAssignedValue || this._Glumci1.HasLoadedOrAssignedValue))
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -302,40 +302,6 @@ namespace AplikacijaGUI
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Glumci_Serija", Storage="_Glumci1", ThisKey="ID", OtherKey="ID", IsForeignKey=true)]
-		public Glumci Glumci1
-		{
-			get
-			{
-				return this._Glumci1.Entity;
-			}
-			set
-			{
-				Glumci previousValue = this._Glumci1.Entity;
-				if (((previousValue != value) 
-							|| (this._Glumci1.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Glumci1.Entity = null;
-						previousValue.Serija = null;
-					}
-					this._Glumci1.Entity = value;
-					if ((value != null))
-					{
-						value.Serija = this;
-						this._ID = value.ID;
-					}
-					else
-					{
-						this._ID = default(int);
-					}
-					this.SendPropertyChanged("Glumci1");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Osoblje_Serija", Storage="_Osoblje1", ThisKey="ID", OtherKey="ID", IsForeignKey=true)]
 		public Osoblje Osoblje1
 		{
@@ -370,6 +336,40 @@ namespace AplikacijaGUI
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Glumci_Serija", Storage="_Glumci1", ThisKey="ID", OtherKey="ID", IsForeignKey=true)]
+		public Glumci Glumci1
+		{
+			get
+			{
+				return this._Glumci1.Entity;
+			}
+			set
+			{
+				Glumci previousValue = this._Glumci1.Entity;
+				if (((previousValue != value) 
+							|| (this._Glumci1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Glumci1.Entity = null;
+						previousValue.Serija = null;
+					}
+					this._Glumci1.Entity = value;
+					if ((value != null))
+					{
+						value.Serija = this;
+						this._ID = value.ID;
+					}
+					else
+					{
+						this._ID = default(int);
+					}
+					this.SendPropertyChanged("Glumci1");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -400,148 +400,6 @@ namespace AplikacijaGUI
 		{
 			this.SendPropertyChanging();
 			entity.Serija1 = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Glumci")]
-	public partial class Glumci : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _ID;
-		
-		private string _ime;
-		
-		private string _prezime;
-		
-		private EntityRef<Serija> _Serija;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDChanging(int value);
-    partial void OnIDChanged();
-    partial void OnimeChanging(string value);
-    partial void OnimeChanged();
-    partial void OnprezimeChanging(string value);
-    partial void OnprezimeChanged();
-    #endregion
-		
-		public Glumci()
-		{
-			this._Serija = default(EntityRef<Serija>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int ID
-		{
-			get
-			{
-				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this.OnIDChanging(value);
-					this.SendPropertyChanging();
-					this._ID = value;
-					this.SendPropertyChanged("ID");
-					this.OnIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ime", DbType="NVarChar(MAX)")]
-		public string ime
-		{
-			get
-			{
-				return this._ime;
-			}
-			set
-			{
-				if ((this._ime != value))
-				{
-					this.OnimeChanging(value);
-					this.SendPropertyChanging();
-					this._ime = value;
-					this.SendPropertyChanged("ime");
-					this.OnimeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prezime", DbType="NVarChar(MAX)")]
-		public string prezime
-		{
-			get
-			{
-				return this._prezime;
-			}
-			set
-			{
-				if ((this._prezime != value))
-				{
-					this.OnprezimeChanging(value);
-					this.SendPropertyChanging();
-					this._prezime = value;
-					this.SendPropertyChanged("prezime");
-					this.OnprezimeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Glumci_Serija", Storage="_Serija", ThisKey="ID", OtherKey="ID", IsUnique=true, IsForeignKey=false)]
-		public Serija Serija
-		{
-			get
-			{
-				return this._Serija.Entity;
-			}
-			set
-			{
-				Serija previousValue = this._Serija.Entity;
-				if (((previousValue != value) 
-							|| (this._Serija.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Serija.Entity = null;
-						previousValue.Glumci1 = null;
-					}
-					this._Serija.Entity = value;
-					if ((value != null))
-					{
-						value.Glumci1 = this;
-					}
-					this.SendPropertyChanged("Serija");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 	
@@ -972,6 +830,148 @@ namespace AplikacijaGUI
 					if ((value != null))
 					{
 						value.Osoblje1 = this;
+					}
+					this.SendPropertyChanged("Serija");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Glumci")]
+	public partial class Glumci : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _ime;
+		
+		private string _prezime;
+		
+		private EntityRef<Serija> _Serija;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnimeChanging(string value);
+    partial void OnimeChanged();
+    partial void OnprezimeChanging(string value);
+    partial void OnprezimeChanged();
+    #endregion
+		
+		public Glumci()
+		{
+			this._Serija = default(EntityRef<Serija>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ime", DbType="NVarChar(MAX)")]
+		public string ime
+		{
+			get
+			{
+				return this._ime;
+			}
+			set
+			{
+				if ((this._ime != value))
+				{
+					this.OnimeChanging(value);
+					this.SendPropertyChanging();
+					this._ime = value;
+					this.SendPropertyChanged("ime");
+					this.OnimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prezime", DbType="NVarChar(MAX)")]
+		public string prezime
+		{
+			get
+			{
+				return this._prezime;
+			}
+			set
+			{
+				if ((this._prezime != value))
+				{
+					this.OnprezimeChanging(value);
+					this.SendPropertyChanging();
+					this._prezime = value;
+					this.SendPropertyChanged("prezime");
+					this.OnprezimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Glumci_Serija", Storage="_Serija", ThisKey="ID", OtherKey="ID", IsUnique=true, IsForeignKey=false)]
+		public Serija Serija
+		{
+			get
+			{
+				return this._Serija.Entity;
+			}
+			set
+			{
+				Serija previousValue = this._Serija.Entity;
+				if (((previousValue != value) 
+							|| (this._Serija.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Serija.Entity = null;
+						previousValue.Glumci1 = null;
+					}
+					this._Serija.Entity = value;
+					if ((value != null))
+					{
+						value.Glumci1 = this;
 					}
 					this.SendPropertyChanged("Serija");
 				}

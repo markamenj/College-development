@@ -54,14 +54,77 @@ namespace AplikacijaGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DelForm dform = new DelForm();
-            dform.Show();
+            var confirmResult = MessageBox.Show("Are you sure you want to save ??",
+                                     "Save?",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                delklserija();
+
+                // If 'Yes', do something here.
+            }
+            else
+            {
+                // If 'No', do something here.
+            }
+        }
+        private void delklserija()
+        {
+            DataClasses1DataContext linqglu = new DataClasses1DataContext(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AplikacijaBase.mdf;Integrated Security=True;Connect Timeout=30");
+            int rowindex = dataGridView1.CurrentRow.Index; // here rowindex will get through currentrow property of datagridview.
+            Klijent_serija GI2 = new Klijent_serija();
+            int iid = 0;
+            iid = Convert.ToInt32(dataGridView1.Rows[rowindex].Cells[0].Value);
+            var delete = from p in linqglu.Klijent_serijas
+                         where p.ID == iid// match the ecords.
+                         select p;
+            linqglu.Klijent_serijas.DeleteAllOnSubmit(delete);// DeleteAllOnSubmit function will call and queries will automatic call thats the data context class handle it.
+            linqglu.SubmitChanges();
+            // SI = SDCD1.StudentInfos.Single(c => c.Id == iid);
+            rowindex = 0;
+            MessageBox.Show("deleted");
+            Refresh();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            InsertGUIKlijentserija iserija = new InsertGUIKlijentserija();
-            iserija.Show();
+            var confirmResult = MessageBox.Show("Are you sure you want to save ??",
+                                     "Save?",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                updateklserija();
+
+                // If 'Yes', do something here.
+            }
+            else
+            {
+                // If 'No', do something here.
+            }
+        }
+        public void updateklserija()
+        {
+            int iid = 0;
+            DataClasses1DataContext linqglu = new DataClasses1DataContext(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AplikacijaBase.mdf;Integrated Security=True;Connect Timeout=30");
+            Klijent_serija SI = new Klijent_serija();
+            int rowindex = dataGridView1.CurrentRow.Index; // here rowindex will get through currentrow property of datagridview.
+            iid = Convert.ToInt32(dataGridView1.Rows[rowindex].Cells[0].Value);
+            var update = from s1 in linqglu.Klijent_serijas
+                         where s1.ID == iid
+                         select s1;
+            foreach (var v in update)
+            {
+                v.ID = Convert.ToInt32(dataGridView1.Rows[rowindex].Cells[0].Value);
+                v.IDserije = Convert.ToInt32(dataGridView1.Rows[rowindex].Cells[1].Value);
+                v.Ime = Convert.ToString(dataGridView1.Rows[rowindex].Cells[2].Value);
+                v.Glumci = Convert.ToString(dataGridView1.Rows[rowindex].Cells[3].Value);
+                v.Osoblje = Convert.ToString(dataGridView1.Rows[rowindex].Cells[4].Value);
+                v.Opis = Convert.ToString(dataGridView1.Rows[rowindex].Cells[5].Value);
+                v.Pogledano_epizoda = Convert.ToString(dataGridView1.Rows[rowindex].Cells[6].Value);
+                linqglu.SubmitChanges(); // here will submitchanges function call and queries will automatic call.
+            }
+            MessageBox.Show("Updated");
+            Refresh();// refresh the data gridview.
         }
     }
 }
