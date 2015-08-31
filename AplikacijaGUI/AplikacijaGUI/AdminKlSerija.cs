@@ -126,5 +126,12 @@ namespace AplikacijaGUI
             MessageBox.Show("Updated");
             Refresh();// refresh the data gridview.
         }
+
+        private void AdminKlSerija_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'aplikacijaBaseDataSet.Klijent_serija' table. You can move, or remove it, as needed.
+            this.klijent_serijaTableAdapter.Fill(this.aplikacijaBaseDataSet.Klijent_serija);
+
+        }
     }
 }

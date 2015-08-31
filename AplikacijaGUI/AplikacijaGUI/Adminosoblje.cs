@@ -120,5 +120,12 @@ namespace AplikacijaGUI
             MessageBox.Show("Updated");
             Refresh();// refresh the data gridview.
         }
+
+        private void Adminosoblje_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'aplikacijaBaseDataSet.Osoblje' table. You can move, or remove it, as needed.
+            this.osobljeTableAdapter.Fill(this.aplikacijaBaseDataSet.Osoblje);
+
+        }
     }
 }

@@ -19,14 +19,58 @@ namespace AplikacijaGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-                        Klijentserijaklijent klisserkli = new Klijentserijaklijent();
-                        klisserkli.Show();
+            try
+            {
+                Klijentserijaklijent klisserkli = new Klijentserijaklijent();
+                klisserkli.Show();
+            }
+            catch (InvalidCastException e1)
+            {
+                Console.WriteLine("Exception,cannot load form", e1);
+                throw;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Klijentserija klisse = new Klijentserija();
-            klisse.Show();
+            try
+            {
+                Klijentserija klisse = new Klijentserija();
+                klisse.Show();
+            }
+            catch (InvalidCastException e1)
+            {
+                Console.WriteLine("Exception,cannot load form", e1);
+                throw;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Glumciklijent glukli = new Glumciklijent();
+                glukli.Show();
+            }
+            catch (InvalidCastException e1)
+            {
+                Console.WriteLine("Exception,cannot load form", e1);
+                throw;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Klijentosoblje klios = new Klijentosoblje();
+                klios.Show();
+            }
+            catch (InvalidCastException e1)
+            {
+                Console.WriteLine("Exception,cannot load form", e1);
+                throw;
+            }
         }
     }
 }

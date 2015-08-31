@@ -85,8 +85,47 @@ namespace AplikacijaGUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            InsertSerija iserija = new InsertSerija();
-            iserija.Show();
+            var confirmResult = MessageBox.Show("Are you sure you want to save ??",
+                                     "Save?",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                updateserija();
+                // If 'Yes', do something here.
+            }
+            else
+            {
+                // If 'No', do something here.
+            }
+        }
+        public void updateserija()
+        {
+            int iid = 0;
+            DataClasses1DataContext linqglu = new DataClasses1DataContext(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AplikacijaBase.mdf;Integrated Security=True;Connect Timeout=30");
+            Serija SI = new Serija();
+            int rowindex = dataGridView1.CurrentRow.Index; // here rowindex will get through currentrow property of datagridview.
+            iid = Convert.ToInt32(dataGridView1.Rows[rowindex].Cells[0].Value);
+            var update = from s1 in linqglu.Serijas
+                         where s1.ID == iid
+                         select s1;
+            foreach (var v in update)
+            {
+                v.ID = Convert.ToInt32(dataGridView1.Rows[rowindex].Cells[0].Value);
+                v.Ime = Convert.ToString(dataGridView1.Rows[rowindex].Cells[1].Value);
+                v.Glumci = Convert.ToString(dataGridView1.Rows[rowindex].Cells[2].Value);
+                v.Osoblje = Convert.ToString(dataGridView1.Rows[rowindex].Cells[3].Value);
+                v.Opis = Convert.ToString(dataGridView1.Rows[rowindex].Cells[4].Value);
+                linqglu.SubmitChanges(); // here will submitchanges function call and queries will automatic call.
+            }
+            MessageBox.Show("Updated");
+            Refresh();// refresh the data gridview.
+        }
+
+        private void AdminSerija_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'aplikacijaBaseDataSet.Serija' table. You can move, or remove it, as needed.
+            this.serijaTableAdapter.Fill(this.aplikacijaBaseDataSet.Serija);
+
         }
 
     }

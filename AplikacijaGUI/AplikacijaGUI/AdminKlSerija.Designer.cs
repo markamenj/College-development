@@ -41,8 +41,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.Insert = new System.Windows.Forms.Button();
+            this.aplikacijaBaseDataSet = new AplikacijaGUI.AplikacijaBaseDataSet();
+            this.klijentserijaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.klijent_serijaTableAdapter = new AplikacijaGUI.AplikacijaBaseDataSetTableAdapters.Klijent_serijaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klijentserijaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aplikacijaBaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klijentserijaBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -57,10 +62,10 @@
             this.osobljeDataGridViewTextBoxColumn,
             this.opisDataGridViewTextBoxColumn,
             this.pogledanoepizodaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.klijentserijaBindingSource;
+            this.dataGridView1.DataSource = this.klijentserijaBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(724, 169);
+            this.dataGridView1.Size = new System.Drawing.Size(749, 169);
             this.dataGridView1.TabIndex = 0;
             // 
             // iDDataGridViewTextBoxColumn
@@ -140,19 +145,36 @@
             this.Insert.UseVisualStyleBackColor = true;
             this.Insert.Click += new System.EventHandler(this.button3_Click);
             // 
+            // aplikacijaBaseDataSet
+            // 
+            this.aplikacijaBaseDataSet.DataSetName = "AplikacijaBaseDataSet";
+            this.aplikacijaBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // klijentserijaBindingSource1
+            // 
+            this.klijentserijaBindingSource1.DataMember = "Klijent_serija";
+            this.klijentserijaBindingSource1.DataSource = this.aplikacijaBaseDataSet;
+            // 
+            // klijent_serijaTableAdapter
+            // 
+            this.klijent_serijaTableAdapter.ClearBeforeFill = true;
+            // 
             // AdminKlSerija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 262);
+            this.ClientSize = new System.Drawing.Size(773, 262);
             this.Controls.Add(this.Insert);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "AdminKlSerija";
             this.Text = "AdminKlSerija";
+            this.Load += new System.EventHandler(this.AdminKlSerija_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.klijentserijaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aplikacijaBaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klijentserijaBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -171,5 +193,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Button Insert;
+        private AplikacijaBaseDataSet aplikacijaBaseDataSet;
+        private System.Windows.Forms.BindingSource klijentserijaBindingSource1;
+        private AplikacijaBaseDataSetTableAdapters.Klijent_serijaTableAdapter klijent_serijaTableAdapter;
     }
 }

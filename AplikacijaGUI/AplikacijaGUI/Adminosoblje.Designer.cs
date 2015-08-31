@@ -38,8 +38,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.Insert = new System.Windows.Forms.Button();
+            this.aplikacijaBaseDataSet = new AplikacijaGUI.AplikacijaBaseDataSet();
+            this.osobljeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.osobljeTableAdapter = new AplikacijaGUI.AplikacijaBaseDataSetTableAdapters.OsobljeTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.osobljeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aplikacijaBaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.osobljeBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -51,7 +56,7 @@
             this.imeDataGridViewTextBoxColumn,
             this.prezimeDataGridViewTextBoxColumn,
             this.tvrtkaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.osobljeBindingSource;
+            this.dataGridView1.DataSource = this.osobljeBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(13, 13);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(447, 150);
@@ -116,6 +121,20 @@
             this.Insert.UseVisualStyleBackColor = true;
             this.Insert.Click += new System.EventHandler(this.button3_Click);
             // 
+            // aplikacijaBaseDataSet
+            // 
+            this.aplikacijaBaseDataSet.DataSetName = "AplikacijaBaseDataSet";
+            this.aplikacijaBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // osobljeBindingSource1
+            // 
+            this.osobljeBindingSource1.DataMember = "Osoblje";
+            this.osobljeBindingSource1.DataSource = this.aplikacijaBaseDataSet;
+            // 
+            // osobljeTableAdapter
+            // 
+            this.osobljeTableAdapter.ClearBeforeFill = true;
+            // 
             // Adminosoblje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,8 +146,11 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Adminosoblje";
             this.Text = "Adminosoblje";
+            this.Load += new System.EventHandler(this.Adminosoblje_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.osobljeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aplikacijaBaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.osobljeBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -144,5 +166,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Button Insert;
+        private AplikacijaBaseDataSet aplikacijaBaseDataSet;
+        private System.Windows.Forms.BindingSource osobljeBindingSource1;
+        private AplikacijaBaseDataSetTableAdapters.OsobljeTableAdapter osobljeTableAdapter;
     }
 }

@@ -24,7 +24,7 @@ namespace AplikacijaGUI
 
         private void OKButton_Click(object sender, EventArgs e)
         {
-            if (password.Text == "admin")
+            if (password.Text == "mod")
             {
                 Modstart astart = new Modstart();
                 astart.Show();

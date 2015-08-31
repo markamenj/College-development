@@ -19,20 +19,44 @@ namespace AplikacijaGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ModSerija modse = new ModSerija();
-            modse.Show();
+            try
+            {
+                ModSerija modse = new ModSerija();
+                modse.Show();
+            }
+            catch (InvalidCastException e1)
+            {
+                Console.WriteLine("Exception,cannot load form", e1);
+                throw;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Modosoblje modos = new Modosoblje();
-            modos.Show();
+            try
+            {
+                Modosoblje modos = new Modosoblje();
+                modos.Show();
+            }
+            catch (InvalidCastException e1)
+            {
+                Console.WriteLine("Exception,cannot load form", e1);
+                throw;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MOdglumci modgl = new MOdglumci();
-            modgl.Show();
+            try
+            {
+                MOdglumci modgl = new MOdglumci();
+                modgl.Show();
+            }
+            catch (InvalidCastException e1)
+            {
+                Console.WriteLine("Exception,cannot load form", e1);
+                throw;
+            }
         }
     }
 }

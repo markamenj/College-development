@@ -39,8 +39,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.aplikacijaBaseDataSet = new AplikacijaGUI.AplikacijaBaseDataSet();
+            this.serijaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.serijaTableAdapter = new AplikacijaGUI.AplikacijaBaseDataSetTableAdapters.SerijaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serijaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aplikacijaBaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serijaBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -53,10 +58,10 @@
             this.glumciDataGridViewTextBoxColumn,
             this.osobljeDataGridViewTextBoxColumn,
             this.opisDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.serijaBindingSource;
+            this.dataGridView1.DataSource = this.serijaBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(13, 13);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(536, 237);
+            this.dataGridView1.Size = new System.Drawing.Size(551, 237);
             this.dataGridView1.TabIndex = 0;
             // 
             // iDDataGridViewTextBoxColumn
@@ -124,19 +129,36 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // aplikacijaBaseDataSet
+            // 
+            this.aplikacijaBaseDataSet.DataSetName = "AplikacijaBaseDataSet";
+            this.aplikacijaBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // serijaBindingSource1
+            // 
+            this.serijaBindingSource1.DataMember = "Serija";
+            this.serijaBindingSource1.DataSource = this.aplikacijaBaseDataSet;
+            // 
+            // serijaTableAdapter
+            // 
+            this.serijaTableAdapter.ClearBeforeFill = true;
+            // 
             // ModSerija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 357);
+            this.ClientSize = new System.Drawing.Size(589, 357);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ModSerija";
             this.Text = "ModSerija";
+            this.Load += new System.EventHandler(this.ModSerija_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serijaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aplikacijaBaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serijaBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -153,5 +175,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private AplikacijaBaseDataSet aplikacijaBaseDataSet;
+        private System.Windows.Forms.BindingSource serijaBindingSource1;
+        private AplikacijaBaseDataSetTableAdapters.SerijaTableAdapter serijaTableAdapter;
     }
 }
