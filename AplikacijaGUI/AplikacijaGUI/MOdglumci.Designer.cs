@@ -30,20 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.glumciBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.aplikacijaBaseDataSet = new AplikacijaGUI.AplikacijaBaseDataSet();
             this.glumciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.aplikacijaBaseDataSet = new AplikacijaGUI.AplikacijaBaseDataSet();
-            this.glumciBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.glumciTableAdapter = new AplikacijaGUI.AplikacijaBaseDataSetTableAdapters.GlumciTableAdapter();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.glumciBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aplikacijaBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.glumciBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aplikacijaBaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glumciBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -60,24 +60,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(343, 150);
             this.dataGridView1.TabIndex = 0;
             // 
-            // iDDataGridViewTextBoxColumn
+            // glumciBindingSource1
             // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.glumciBindingSource1.DataMember = "Glumci";
+            this.glumciBindingSource1.DataSource = this.aplikacijaBaseDataSet;
             // 
-            // imeDataGridViewTextBoxColumn
+            // aplikacijaBaseDataSet
             // 
-            this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
-            this.imeDataGridViewTextBoxColumn.HeaderText = "ime";
-            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
-            // 
-            // prezimeDataGridViewTextBoxColumn
-            // 
-            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
-            this.prezimeDataGridViewTextBoxColumn.HeaderText = "prezime";
-            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
+            this.aplikacijaBaseDataSet.DataSetName = "AplikacijaBaseDataSet";
+            this.aplikacijaBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // glumciBindingSource
             // 
@@ -113,19 +104,27 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // aplikacijaBaseDataSet
-            // 
-            this.aplikacijaBaseDataSet.DataSetName = "AplikacijaBaseDataSet";
-            this.aplikacijaBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // glumciBindingSource1
-            // 
-            this.glumciBindingSource1.DataMember = "Glumci";
-            this.glumciBindingSource1.DataSource = this.aplikacijaBaseDataSet;
-            // 
             // glumciTableAdapter
             // 
             this.glumciTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            // 
+            // imeDataGridViewTextBoxColumn
+            // 
+            this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
+            this.imeDataGridViewTextBoxColumn.HeaderText = "ime";
+            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
+            // 
+            // prezimeDataGridViewTextBoxColumn
+            // 
+            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
+            this.prezimeDataGridViewTextBoxColumn.HeaderText = "prezime";
+            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
             // 
             // MOdglumci
             // 
@@ -140,9 +139,9 @@
             this.Text = "MOdglumci";
             this.Load += new System.EventHandler(this.MOdglumci_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.glumciBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aplikacijaBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.glumciBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aplikacijaBaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glumciBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -150,9 +149,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource glumciBindingSource;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -160,5 +156,8 @@
         private AplikacijaBaseDataSet aplikacijaBaseDataSet;
         private System.Windows.Forms.BindingSource glumciBindingSource1;
         private AplikacijaBaseDataSetTableAdapters.GlumciTableAdapter glumciTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
     }
 }

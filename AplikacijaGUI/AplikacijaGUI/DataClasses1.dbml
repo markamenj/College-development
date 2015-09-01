@@ -2,7 +2,7 @@
   <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AplikacijaBase.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="AplikacijaGUI.Properties.Settings" SettingsPropertyName="AplikacijaBaseConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Serija" Member="Serijas">
     <Type Name="Serija">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID" AutoSync="Never" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Ime" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="Glumci" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="Osoblje" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
@@ -15,7 +15,7 @@
   </Table>
   <Table Name="dbo.Klijent_serija" Member="Klijent_serijas">
     <Type Name="Klijent_serija">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID" AutoSync="Never" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="IDserije" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Ime" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="Glumci" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
@@ -28,7 +28,7 @@
   </Table>
   <Table Name="dbo.Osoblje" Member="Osobljes">
     <Type Name="Osoblje">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID" AutoSync="Never" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Ime" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="Prezime" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="Tvrtka" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
@@ -37,7 +37,7 @@
   </Table>
   <Table Name="dbo.Glumci" Member="Glumcis">
     <Type Name="Glumci">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID" AutoSync="Never" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="ime" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="prezime" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Association Name="Glumci_Serija" Member="Serija" ThisKey="ID" OtherKey="ID" Type="Serija" Cardinality="One" />
