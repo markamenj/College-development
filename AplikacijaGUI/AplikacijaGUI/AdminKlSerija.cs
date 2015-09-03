@@ -54,8 +54,8 @@ namespace AplikacijaGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("Are you sure you want to save ??",
-                                     "Save?",
+            var confirmResult = MessageBox.Show("Are you sure you want to delete ??",
+                                     "delete?",
                                      MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
             {
@@ -88,8 +88,8 @@ namespace AplikacijaGUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("Are you sure you want to save ??",
-                                     "Save?",
+            var confirmResult = MessageBox.Show("Are you sure you want to update ??",
+                                     "update?",
                                      MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
             {
@@ -131,6 +131,11 @@ namespace AplikacijaGUI
         {
             // TODO: This line of code loads data into the 'aplikacijaBaseDataSet.Klijent_serija' table. You can move, or remove it, as needed.
             this.klijent_serijaTableAdapter.Fill(this.aplikacijaBaseDataSet.Klijent_serija);
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

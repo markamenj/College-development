@@ -109,42 +109,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
-    <Compile Include="DelForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DelForm.Designer.cs">
-      <DependentUpon>DelForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="glumacInfo.cs" />
-    <Compile Include="InsertGlumci.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InsertGlumci.Designer.cs">
-      <DependentUpon>InsertGlumci.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InsertGUIKlijentserija.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InsertGUIKlijentserija.Designer.cs">
-      <DependentUpon>InsertGUIKlijentserija.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InsertOsoblje.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InsertOsoblje.Designer.cs">
-      <DependentUpon>InsertOsoblje.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InsertSerija.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InsertSerija.Designer.cs">
-      <DependentUpon>InsertSerija.cs</DependentUpon>
     </Compile>
     <Compile Include="Klijentserija.cs">
       <SubType>Form</SubType>
@@ -240,23 +209,8 @@
     <None Include="DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </None>
-    <EmbeddedResource Include="DelForm.resx">
-      <DependentUpon>DelForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InsertGlumci.resx">
-      <DependentUpon>InsertGlumci.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InsertGUIKlijentserija.resx">
-      <DependentUpon>InsertGUIKlijentserija.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InsertOsoblje.resx">
-      <DependentUpon>InsertOsoblje.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InsertSerija.resx">
-      <DependentUpon>InsertSerija.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Klijentserija.resx">
       <DependentUpon>Klijentserija.cs</DependentUpon>

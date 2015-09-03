@@ -21,12 +21,7 @@ C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\
 C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Modosoblje.resources
 C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.ModSerija.resources
 C:\Users\zmaj\documents\visual studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Modstart.resources
-C:\Users\zmaj\Documents\Visual Studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.DelForm.resources
 C:\Users\zmaj\Documents\Visual Studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.AdminPass.resources
-C:\Users\zmaj\Documents\Visual Studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.InsertGlumci.resources
-C:\Users\zmaj\Documents\Visual Studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.InsertGUIKlijentserija.resources
-C:\Users\zmaj\Documents\Visual Studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.InsertOsoblje.resources
-C:\Users\zmaj\Documents\Visual Studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.InsertSerija.resources
 C:\Users\zmaj\Documents\Visual Studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.ModLogin.resources
 C:\Users\zmaj\Documents\Visual Studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\bin\Debug\AplikacijaBase.mdf
 C:\Users\zmaj\Documents\Visual Studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\bin\Debug\AplikacijaBase_log.ldf

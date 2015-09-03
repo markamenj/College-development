@@ -36,11 +36,11 @@
             this.Insert = new System.Windows.Forms.Button();
             this.glumciTableAdapter = new AplikacijaGUI.AplikacijaBaseDataSetTableAdapters.GlumciTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.glumciBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.glumciBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.glumciBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.glumciBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.glumciBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aplikacijaBaseDataSet)).BeginInit();
@@ -65,7 +65,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "Insert";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -85,7 +85,7 @@
             this.Insert.Name = "Insert";
             this.Insert.Size = new System.Drawing.Size(75, 23);
             this.Insert.TabIndex = 3;
-            this.Insert.Text = "Insert";
+            this.Insert.Text = "Update";
             this.Insert.UseVisualStyleBackColor = true;
             this.Insert.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -107,14 +107,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(353, 150);
             this.dataGridView1.TabIndex = 4;
             // 
-            // glumciBindingSource
-            // 
-            this.glumciBindingSource.DataSource = typeof(AplikacijaGUI.Glumci);
-            // 
-            // glumciBindingSource2
-            // 
-            this.glumciBindingSource2.DataSource = typeof(AplikacijaGUI.Glumci);
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -132,6 +124,14 @@
             this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
             this.prezimeDataGridViewTextBoxColumn.HeaderText = "prezime";
             this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
+            // 
+            // glumciBindingSource
+            // 
+            this.glumciBindingSource.DataSource = typeof(AplikacijaGUI.Glumci);
+            // 
+            // glumciBindingSource2
+            // 
+            this.glumciBindingSource2.DataSource = typeof(AplikacijaGUI.Glumci);
             // 
             // label1
             // 

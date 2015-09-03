@@ -37,17 +37,18 @@
             this.osobljeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pogledanoepizodaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.klijentserijaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.aplikacijaBaseDataSet = new AplikacijaGUI.AplikacijaBaseDataSet();
             this.klijentserijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Delete = new System.Windows.Forms.Button();
             this.Insert = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.aplikacijaBaseDataSet = new AplikacijaGUI.AplikacijaBaseDataSet();
-            this.klijentserijaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.klijent_serijaTableAdapter = new AplikacijaGUI.AplikacijaBaseDataSetTableAdapters.Klijent_serijaTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.klijentserijaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aplikacijaBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klijentserijaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aplikacijaBaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klijentserijaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -112,6 +113,16 @@
             this.pogledanoepizodaDataGridViewTextBoxColumn.HeaderText = "Pogledano_epizoda";
             this.pogledanoepizodaDataGridViewTextBoxColumn.Name = "pogledanoepizodaDataGridViewTextBoxColumn";
             // 
+            // klijentserijaBindingSource1
+            // 
+            this.klijentserijaBindingSource1.DataMember = "Klijent_serija";
+            this.klijentserijaBindingSource1.DataSource = this.aplikacijaBaseDataSet;
+            // 
+            // aplikacijaBaseDataSet
+            // 
+            this.aplikacijaBaseDataSet.DataSetName = "AplikacijaBaseDataSet";
+            this.aplikacijaBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // klijentserijaBindingSource
             // 
             this.klijentserijaBindingSource.DataSource = typeof(AplikacijaGUI.Klijent_serija);
@@ -142,29 +153,29 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
+            this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // aplikacijaBaseDataSet
-            // 
-            this.aplikacijaBaseDataSet.DataSetName = "AplikacijaBaseDataSet";
-            this.aplikacijaBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // klijentserijaBindingSource1
-            // 
-            this.klijentserijaBindingSource1.DataMember = "Klijent_serija";
-            this.klijentserijaBindingSource1.DataSource = this.aplikacijaBaseDataSet;
             // 
             // klijent_serijaTableAdapter
             // 
             this.klijent_serijaTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 195);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(378, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Unesite sve podatke osim ID. Za glumce i osoblje unesite ID glumca tj. osoblja.";
             // 
             // Klijentserijaklijent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(773, 257);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Insert);
             this.Controls.Add(this.Delete);
@@ -173,10 +184,11 @@
             this.Text = "Klijentserijaklijent";
             this.Load += new System.EventHandler(this.Klijentserijaklijent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.klijentserijaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aplikacijaBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.klijentserijaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aplikacijaBaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klijentserijaBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -197,5 +209,6 @@
         private AplikacijaBaseDataSet aplikacijaBaseDataSet;
         private System.Windows.Forms.BindingSource klijentserijaBindingSource1;
         private AplikacijaBaseDataSetTableAdapters.Klijent_serijaTableAdapter klijent_serijaTableAdapter;
+        private System.Windows.Forms.Label label1;
     }
 }

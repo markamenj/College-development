@@ -44,7 +44,7 @@ namespace AplikacijaGUI
             GI1.prezime = Convert.ToString(dataGridView1.Rows[rowindex].Cells[2].Value);
             linqglu.Glumcis.InsertOnSubmit(GI1);
             linqglu.SubmitChanges();
-            MessageBox.Show("Spremljeno");
+            MessageBox.Show("Saved");
             rowindex = 0;
         }
         private void delglumac()
@@ -67,8 +67,8 @@ namespace AplikacijaGUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("Are you sure you want to save ??",
-                                     "Save?",
+            var confirmResult = MessageBox.Show("Are you sure you want to delete ??",
+                                     "delete?",
                                      MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
             {
@@ -84,8 +84,8 @@ namespace AplikacijaGUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("Are you sure you want to save ??",
-                                     "Save?",
+            var confirmResult = MessageBox.Show("Are you sure you want to update ??",
+                                     "update?",
                                      MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
             {
