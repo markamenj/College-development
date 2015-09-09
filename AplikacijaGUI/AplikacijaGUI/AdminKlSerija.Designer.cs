@@ -30,20 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDserijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.osobljeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pogledanoepizodaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.klijentserijaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.aplikacijaBaseDataSet = new AplikacijaGUI.AplikacijaBaseDataSet();
-            this.klijentserijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.Insert = new System.Windows.Forms.Button();
-            this.klijent_serijaTableAdapter = new AplikacijaGUI.AplikacijaBaseDataSetTableAdapters.Klijent_serijaTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
+            this.klijentserijaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.aplikacijaBaseDataSet = new AplikacijaGUI.AplikacijaBaseDataSet();
+            this.klijent_serijaTableAdapter = new AplikacijaGUI.AplikacijaBaseDataSetTableAdapters.Klijent_serijaTableAdapter();
+            this.klijentserijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDserijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.osobljeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pogledanoepizodaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klijentserijaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aplikacijaBaseDataSet)).BeginInit();
@@ -58,65 +59,15 @@
             this.iDDataGridViewTextBoxColumn,
             this.iDserijeDataGridViewTextBoxColumn,
             this.imeDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn1,
             this.osobljeDataGridViewTextBoxColumn,
             this.opisDataGridViewTextBoxColumn,
             this.pogledanoepizodaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.klijentserijaBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(646, 169);
+            this.dataGridView1.Size = new System.Drawing.Size(754, 169);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iDserijeDataGridViewTextBoxColumn
-            // 
-            this.iDserijeDataGridViewTextBoxColumn.DataPropertyName = "IDserije";
-            this.iDserijeDataGridViewTextBoxColumn.HeaderText = "IDserije";
-            this.iDserijeDataGridViewTextBoxColumn.Name = "iDserijeDataGridViewTextBoxColumn";
-            // 
-            // imeDataGridViewTextBoxColumn
-            // 
-            this.imeDataGridViewTextBoxColumn.DataPropertyName = "Ime";
-            this.imeDataGridViewTextBoxColumn.HeaderText = "Ime";
-            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
-            // 
-            // osobljeDataGridViewTextBoxColumn
-            // 
-            this.osobljeDataGridViewTextBoxColumn.DataPropertyName = "Osoblje";
-            this.osobljeDataGridViewTextBoxColumn.HeaderText = "Osoblje";
-            this.osobljeDataGridViewTextBoxColumn.Name = "osobljeDataGridViewTextBoxColumn";
-            // 
-            // opisDataGridViewTextBoxColumn
-            // 
-            this.opisDataGridViewTextBoxColumn.DataPropertyName = "Opis";
-            this.opisDataGridViewTextBoxColumn.HeaderText = "Opis";
-            this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
-            // 
-            // pogledanoepizodaDataGridViewTextBoxColumn
-            // 
-            this.pogledanoepizodaDataGridViewTextBoxColumn.DataPropertyName = "Pogledano_epizoda";
-            this.pogledanoepizodaDataGridViewTextBoxColumn.HeaderText = "Pogledano_epizoda";
-            this.pogledanoepizodaDataGridViewTextBoxColumn.Name = "pogledanoepizodaDataGridViewTextBoxColumn";
-            // 
-            // klijentserijaBindingSource1
-            // 
-            this.klijentserijaBindingSource1.DataMember = "Klijent_serija";
-            this.klijentserijaBindingSource1.DataSource = this.aplikacijaBaseDataSet;
-            // 
-            // aplikacijaBaseDataSet
-            // 
-            this.aplikacijaBaseDataSet.DataSetName = "AplikacijaBaseDataSet";
-            this.aplikacijaBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // klijentserijaBindingSource
-            // 
-            this.klijentserijaBindingSource.DataSource = typeof(AplikacijaGUI.Klijent_serija);
             // 
             // button2
             // 
@@ -148,25 +99,81 @@
             this.Insert.UseVisualStyleBackColor = true;
             this.Insert.Click += new System.EventHandler(this.button3_Click);
             // 
-            // klijent_serijaTableAdapter
-            // 
-            this.klijent_serijaTableAdapter.ClearBeforeFill = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 188);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(378, 13);
+            this.label1.Size = new System.Drawing.Size(340, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Unesite sve podatke osim ID. Za glumce i osoblje unesite ID glumca tj. osoblja.";
+            this.label1.Text = "Unesite sve podatke. Za glumce i osoblje unesite ID glumca tj. osoblja.";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // klijentserijaBindingSource1
+            // 
+            this.klijentserijaBindingSource1.DataMember = "Klijent_serija";
+            this.klijentserijaBindingSource1.DataSource = this.aplikacijaBaseDataSet;
+            // 
+            // aplikacijaBaseDataSet
+            // 
+            this.aplikacijaBaseDataSet.DataSetName = "AplikacijaBaseDataSet";
+            this.aplikacijaBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // klijent_serijaTableAdapter
+            // 
+            this.klijent_serijaTableAdapter.ClearBeforeFill = true;
+            // 
+            // klijentserijaBindingSource
+            // 
+            this.klijentserijaBindingSource.DataSource = typeof(AplikacijaGUI.Klijent_serija);
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            // 
+            // iDserijeDataGridViewTextBoxColumn
+            // 
+            this.iDserijeDataGridViewTextBoxColumn.DataPropertyName = "IDserije";
+            this.iDserijeDataGridViewTextBoxColumn.HeaderText = "IDserije";
+            this.iDserijeDataGridViewTextBoxColumn.Name = "iDserijeDataGridViewTextBoxColumn";
+            // 
+            // imeDataGridViewTextBoxColumn
+            // 
+            this.imeDataGridViewTextBoxColumn.DataPropertyName = "Ime";
+            this.imeDataGridViewTextBoxColumn.HeaderText = "Ime";
+            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Glumci";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Glumci";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // osobljeDataGridViewTextBoxColumn
+            // 
+            this.osobljeDataGridViewTextBoxColumn.DataPropertyName = "Osoblje";
+            this.osobljeDataGridViewTextBoxColumn.HeaderText = "Osoblje";
+            this.osobljeDataGridViewTextBoxColumn.Name = "osobljeDataGridViewTextBoxColumn";
+            // 
+            // opisDataGridViewTextBoxColumn
+            // 
+            this.opisDataGridViewTextBoxColumn.DataPropertyName = "Opis";
+            this.opisDataGridViewTextBoxColumn.HeaderText = "Opis";
+            this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
+            // 
+            // pogledanoepizodaDataGridViewTextBoxColumn
+            // 
+            this.pogledanoepizodaDataGridViewTextBoxColumn.DataPropertyName = "Pogledano_epizoda";
+            this.pogledanoepizodaDataGridViewTextBoxColumn.HeaderText = "Pogledano_epizoda";
+            this.pogledanoepizodaDataGridViewTextBoxColumn.Name = "pogledanoepizodaDataGridViewTextBoxColumn";
             // 
             // AdminKlSerija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 262);
+            this.ClientSize = new System.Drawing.Size(778, 262);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Insert);
             this.Controls.Add(this.Delete);
@@ -195,10 +202,11 @@
         private System.Windows.Forms.BindingSource klijentserijaBindingSource1;
         private AplikacijaBaseDataSetTableAdapters.Klijent_serijaTableAdapter klijent_serijaTableAdapter;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn glumciDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDserijeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn glumciDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn osobljeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pogledanoepizodaDataGridViewTextBoxColumn;

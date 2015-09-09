@@ -913,6 +913,8 @@ namespace AplikacijaGUI {
                 base.Columns.Add(this.columnPogledano_epizoda);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
+                this.columnID.AutoIncrementSeed = -1;
+                this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
                 this.columnID.Unique = true;
                 this.columnIDserije.AllowDBNull = false;
@@ -2969,8 +2971,13 @@ SELECT ID, IDserije, Ime, Glumci, Osoblje, Opis, Pogledano_epizoda FROM Klijent_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, int Original_IDserije) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
+        public virtual int Delete(global::System.Nullable<int> Original_ID, int Original_IDserije) {
+            if ((Original_ID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_IDserije));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2992,8 +2999,13 @@ SELECT ID, IDserije, Ime, Glumci, Osoblje, Opis, Pogledano_epizoda FROM Klijent_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID, int IDserije, string Ime, string Glumci, string Osoblje, string Opis, string Pogledano_epizoda) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
+        public virtual int Insert(global::System.Nullable<int> ID, int IDserije, string Ime, string Glumci, string Osoblje, string Opis, string Pogledano_epizoda) {
+            if ((ID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(IDserije));
             if ((Ime == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -3045,8 +3057,13 @@ SELECT ID, IDserije, Ime, Glumci, Osoblje, Opis, Pogledano_epizoda FROM Klijent_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID, int IDserije, string Ime, string Glumci, string Osoblje, string Opis, string Pogledano_epizoda, int Original_ID, int Original_IDserije) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
+        public virtual int Update(global::System.Nullable<int> ID, int IDserije, string Ime, string Glumci, string Osoblje, string Opis, string Pogledano_epizoda, global::System.Nullable<int> Original_ID, int Original_IDserije) {
+            if ((ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(IDserije));
             if ((Ime == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -3078,7 +3095,12 @@ SELECT ID, IDserije, Ime, Glumci, Osoblje, Opis, Pogledano_epizoda FROM Klijent_
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Pogledano_epizoda));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_ID));
+            if ((Original_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_IDserije));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3100,7 +3122,7 @@ SELECT ID, IDserije, Ime, Glumci, Osoblje, Opis, Pogledano_epizoda FROM Klijent_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int IDserije, string Ime, string Glumci, string Osoblje, string Opis, string Pogledano_epizoda, int Original_ID, int Original_IDserije) {
+        public virtual int Update(int IDserije, string Ime, string Glumci, string Osoblje, string Opis, string Pogledano_epizoda, global::System.Nullable<int> Original_ID, int Original_IDserije) {
             return this.Update(Original_ID, IDserije, Ime, Glumci, Osoblje, Opis, Pogledano_epizoda, Original_ID, Original_IDserije);
         }
     }

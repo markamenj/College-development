@@ -25,3 +25,30 @@ C:\Users\zmaj\Documents\Visual Studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\
 C:\Users\zmaj\Documents\Visual Studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.ModLogin.resources
 C:\Users\zmaj\Documents\Visual Studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\bin\Debug\AplikacijaBase.mdf
 C:\Users\zmaj\Documents\Visual Studio 2013\Projects\AplikacijaGUI\AplikacijaGUI\bin\Debug\AplikacijaBase_log.ldf
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\bin\Debug\AplikacijaGUI.exe.config
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.exe
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.pdb
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\bin\Debug\AplikacijaBase.mdf
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\bin\Debug\AplikacijaBase_log.ldf
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\bin\Debug\AplikacijaGUI.exe
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\bin\Debug\AplikacijaGUI.pdb
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.csprojResolveAssemblyReference.cache
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Adminglumci.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.AdminKlSerija.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Adminosoblje.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.AdminPass.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.AdminSerija.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Adminstart.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Form1.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Klijentserija.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Glumciklijent.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Klijentosoblje.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Klijentserijaklijent.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Klijentstart.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.MOdglumci.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.ModLogin.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Modosoblje.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.ModSerija.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Modstart.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.Properties.Resources.resources
+C:\Users\zmaj\Documents\Devc#\AplikacijaGUI\AplikacijaGUI\obj\Debug\AplikacijaGUI.csproj.GenerateResource.Cache

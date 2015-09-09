@@ -15,7 +15,7 @@
   </Table>
   <Table Name="dbo.Klijent_serija" Member="Klijent_serijas">
     <Type Name="Klijent_serija">
-      <Column Name="ID" AutoSync="Never" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="IDserije" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Ime" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="Glumci" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />

@@ -75,7 +75,6 @@
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // iDserijeDataGridViewTextBoxColumn
             // 
@@ -166,9 +165,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 195);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(378, 13);
+            this.label1.Size = new System.Drawing.Size(340, 13);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Unesite sve podatke osim ID. Za glumce i osoblje unesite ID glumca tj. osoblja.";
+            this.label1.Text = "Unesite sve podatke. Za glumce i osoblje unesite ID glumca tj. osoblja.";
             // 
             // Klijentserijaklijent
             // 
@@ -195,13 +194,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDserijeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn glumciDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn osobljeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pogledanoepizodaDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource klijentserijaBindingSource;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Button Insert;
@@ -210,5 +202,12 @@
         private System.Windows.Forms.BindingSource klijentserijaBindingSource1;
         private AplikacijaBaseDataSetTableAdapters.Klijent_serijaTableAdapter klijent_serijaTableAdapter;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDserijeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn glumciDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn osobljeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pogledanoepizodaDataGridViewTextBoxColumn;
     }
 }
